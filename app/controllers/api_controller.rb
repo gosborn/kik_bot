@@ -5,6 +5,7 @@ class ApiController < ApplicationController
 
   def incoming
     return unless request.headers["X-Kik-Username"]
+    puts request
     user = params[:messages][0]["from"]
     chatId = params[:messages][0]["chatId"]
     send_reply(user, chatId)
