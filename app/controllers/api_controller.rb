@@ -1,6 +1,9 @@
 class ApiController < ApplicationController
 
-def incoming
+  def home
+  end
+
+  def incoming
     return unless request.headers["X-Kik-Username"]
     user = params[:messages][0]["from"]
     chatId = params[:messages][0]["chatId"]
