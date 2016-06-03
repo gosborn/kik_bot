@@ -1,6 +1,6 @@
 class ApiController < ApplicationController
 
-  def home
+  def index
   end
 
   def incoming
