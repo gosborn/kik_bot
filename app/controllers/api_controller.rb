@@ -17,8 +17,8 @@ class ApiController < ApplicationController
       :method => :post,
       :url => 'https://api.kik.com/v1/message',
       :data => message(person, chatId).to_json,
-      :user => 'gregtestbot',
-      :password => '874144d0-b25e-49fc-875e-8cbff858ccf9',
+      :user => ENV['bot_secret'],
+      :password => ENV['api_secret'],
       :headers => {
       :content_type => :json }
     ).execute
